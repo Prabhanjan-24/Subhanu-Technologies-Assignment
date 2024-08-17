@@ -17,12 +17,14 @@ VALUES
   ('China', 23.5, 350, 2021);
 
 /* 1.Question: Write a query to find the countries with the highest temperatures in the dataset?*/  
+
 SELECT Country, MAX(Temperature) AS HighestTemperature 
 FROM country_pollution
 GROUP BY Country
 ORDER BY HighestTemperature DESC;
 
 /* 2.Question: Write a query to identify the countries with the lowest CO2 emissions in the dataset.*/
+
 SELECT Country, Min(CO2_Emissions) AS LOWESTCO2EMISSION
 FROM country_pollution
 GROUP BY Country 
